@@ -1,0 +1,86 @@
+*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif}
+h1{margin:0 0 16px;font-size:28px}
+.header-controls{margin:8px 0 12px}
+.theme-select{padding:6px 8px;border:2px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);font-weight:600}
+
+/* Theme variables */
+:root{
+	--bg-grad: linear-gradient(180deg,#f0f4ff,#ffffff);
+	--text:#0f172a;
+	--muted:#64748b;
+	--card:#ffffff;
+	--accent:#2563eb;
+	--border:#e6eefc;
+	--bg-image: none;
+}
+
+/* Neubrutalism theme */
+.neubrutal{
+	--bg-grad: linear-gradient(180deg,#c7cc67,#ded189);
+	--text:#071027;
+	--muted:#334155;
+	--card:#f7fbff;
+	--accent:#0b5cff;
+	--border:#0b5cff;
+	background-color: hwb(202 3% 11%);
+}
+
+/* Dark theme */
+.dark{
+	--bg-grad: linear-gradient(180deg,#071021,#050611);
+	--text:#e6eefc;
+	--muted:#9aa7bf;
+	--card:#071426;
+	--accent:#ff6b6b;
+	--border:#0b2333;
+	background-color: #050611;
+}
+
+/* Glass / frosted theme */
+.glass{
+	--bg-grad: linear-gradient(180deg,#329fcd,#e6eefc);
+	--text:#0b1220;
+	--muted:#556675;
+	--card:rgba(255,255,255,0.55);
+	--accent:#06b6d4;
+	--border:rgba(36, 34, 34, 0.55);
+	backdrop-filter: blur(6px);
+	background-color: rgba(255,255,255,0.08);
+}
+
+/* Apply defaults */
+.theme-label{display:none}
+body{margin:0;background:var(--bg-grad);background-repeat:no-repeat;background-size:cover;background-position:center;color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center}
+.container{width:100%;max-width:680px;padding:24px}
+
+h1{margin:0 0 16px;font-size:28px}
+h1{margin:0 0 16px;font-size:28px}
+.search{display:flex;gap:8px;margin-bottom:16px}
+.search input{flex:1;padding:10px 12px;border:2px solid var(--border);border-radius:12px;font-size:16px;background:transparent}
+.search button{padding:10px 14px;border:2px solid var(--border);background:var(--accent);color:#fff;border-radius:10px;cursor:pointer}
+.key-form{display:flex;gap:8px;margin-bottom:12px}
+.key-form input{flex:1;padding:8px 10px;border:1px solid #e2e8f0;border-radius:8px}
+.key-form button{padding:8px 10px;border:0;background:#334155;color:#fff;border-radius:8px;cursor:pointer}
+.weather-card{background:var(--card);border-radius:12px;padding:18px;min-height:120px;display:flex;align-items:center;justify-content:center;border:4px solid var(--border);}
+.weather-card{box-shadow:8px 8px 0 rgba(2,6,23,0.06),-8px -8px 0 rgba(255,255,255,0.6)}
+
+/* Dark theme specific tweaks */
+.dark .weather-card{background:linear-gradient(180deg, rgba(10,18,30,0.9), rgba(5,6,11,0.9));border:2px solid #0b2333;box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+.dark .forecast-item{background:linear-gradient(180deg,#071426,#05121a);border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+/* Glass theme specific tweaks (frosted panels) */
+.glass .weather-card{background:var(--card);border:1px solid rgba(255,255,255,0.5);backdrop-filter:blur(8px);box-shadow:0 6px 20px rgba(10,14,20,0.06)}
+.glass .forecast-item{background:rgba(255,255,255,0.5);border:1px solid rgba(255,255,255,0.45);box-shadow:0 4px 10px rgba(10,14,20,0.04)}
+.weather-grid{display:flex;gap:18px;align-items:center}
+.icon{width:96px;height:96px}
+.details{display:flex;flex-direction:column;gap:6px}
+.temp{font-size:28px;font-weight:700}
+.sub{color:var(--muted)}
+.error{color:#f43f5e}
+.forecast-container{margin-top:16px}
+.forecast-list{display:flex;gap:10px;overflow:auto;padding:8px 4px}
+.forecast-item{min-width:100px;background:var(--card);border-radius:12px;padding:12px;text-align:center;box-shadow:6px 6px 0 rgba(2,6,23,0.06);border:3px solid var(--border)}
+.forecast-item .day{font-weight:600;margin-bottom:6px}
+.forecast-item .f-temp{font-size:16px;font-weight:700}
+.footer{margin-top:12px;color:var(--muted);font-size:13px}
+@media (max-width:480px){.icon{width:72px;height:72px}.temp{font-size:22px}}
